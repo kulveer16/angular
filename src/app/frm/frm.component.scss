@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+.bgr{
+    background-color: white; 
+  
+  }
+.c1{padding-top: 20px; padding-left: 0px; padding-bottom: 10px; color: lightgray;}
+.c2{color: black;}
+.c3{padding-left: 30px;}
+.c4{padding-left: 0px; padding-top: 10px;padding-bottom: 10px;}
+.c12{float: right;margin-bottom: 5px;}
+.container{
+  
+    overflow: hidden;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}

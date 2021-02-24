@@ -1,0 +1,980 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$captech-primary: mat-palette($mat-indigo);
+$captech-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$captech-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$captech-theme: mat-light-theme($captech-primary, $captech-accent, $captech-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($captech-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$captech-primary: mat-palette($mat-indigo);
+$captech-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$captech-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$captech-theme: mat-light-theme($captech-primary, $captech-accent, $captech-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($captech-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css';
+
+@import './variables.scss';
+// @import './app/font-awesome.css';
+
+html,
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    height: 100%;
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+.mat-raised-button {
+    padding: 0 30px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    padding: 0 !important;
+    margin: 0 0 30px 0 !important;
+}
+
+.input-small-size {
+    font-size: $default-text - 4;
+}
+
+.mat-focused .mat-form-field-required-marker {
+    color: $error;
+}
+
+.title {
+    text-align: left;
+    line-height: $heading3 + 5;
+    font: 200 $heading5 Roboto;
+    letter-spacing: 2.85px;
+    color: $color-light-black;
+    opacity: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+
+
+/** button styles*/
+.mat-raised-button {
+    min-width: 100px !important;
+}
+
+button:focus {
+    outline: none;
+}
+
+.mat-button-base {
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: none !important;
+    line-height: 50px !important;
+}
+
+.mat-primary[color="primary"] {
+    background: $color-blue !important;
+}
+
+.btn-primary:hover {
+    background: #26948D !important;
+}
+
+.mat-secondary {
+    background: $color-grey !important;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #AAAAAA !important;
+}
+
+.mat-raised-button[disabled][disabled] {
+    background-color: $btn-disabled-grey !important;
+    color: #ffffff;
+}
+
+/** checkbox styles*/
+.mat-checkbox-inner-container {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background: $color-blue !important;
+    border-radius: 4px !important;
+}
+
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: $color-blue !important;
+}
+
+.mat-checkbox-frame {
+    border-radius: 4px !important;
+    border-color: $color-grey;
+}
+
+.mat-checkbox-inner-container:hover .mat-checkbox-persistent-ripple {
+    opacity: 0 !important;
+}
+
+.mat-checkbox-inner-container:hover .mat-checkbox-frame {
+    border-color: $color-blue;
+}
+
+.mat-checkbox-inner-container:hover .mat-checkbox-background {
+    background: #ccc;
+    transform: scale(0.8);
+    border: 3px solid#fff;
+}
+
+.mat-checkbox .mat-checkbox-ripple {
+    height: 0px !important;
+    width: 0px !important;
+}
+
+mat-checkbox-checked .mat-checkbox-inner-container:hover .mat-checkbox-background {
+    transform: scale(1);
+    border: none !important;
+}
+
+/** Radio-button styles*/
+.mat-radio-button.mat-accent .mat-radio-inner-circle,
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple,
+.mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: $color-blue;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: $color-blue;
+}
+
+.mat-radio-outer-circle {
+    border-color: $color-grey;
+    background-color: $color-grey;
+}
+
+.mat-radio-container:hover .mat-radio-outer-circle {
+    border-color: $color-blue;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mat-radio-container:hover .mat-radio-inner-circle {
+    background-color: $color-grey;
+    width: 20px;
+    height: 20px;
+    transform: scale(0.5);
+    transition: unset;
+}
+
+.mat-radio-button .mat-radio-ripple {
+    height: 0px !important;
+    width: 0px !important;
+}
+
+.mat-radio-container:hover .mat-radio-persistent-ripple {
+    opacity: 0 !important;
+}
+
+.mat-radio-checked .mat-radio-outer-circle {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mat-radio-checked .mat-radio-inner-circle {
+    background-color: $color-blue !important;
+}
+
+/** form-field styles*/
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $color-grey;
+}
+
+.mat-form-field-label {
+    color: $color-light-black;
+    font-size: 16px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    height: 50px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-label {
+    margin-top: -0.5em;
+    top: 1.8em;
+}
+
+.mat-input-element {
+    caret-color: $color-blue !important;
+    font-size: 16px !important;
+}
+
+.mat-form-field-label-wrapper {
+    overflow: inherit !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: $color-blue !important;
+}
+
+.mat-form-field-outline-thick {
+    color: $color-blue !important;
+}
+
+/** mat-slide styles*/
+.mat-select-value-text {
+    font-size: 16px !important;
+}
+
+.mat-slide-toggle-bar {
+    background-color: $color-grey;
+}
+
+.mat-slide-toggle .mat-slide-toggle-ripple {
+    height: 0px !important;
+    width: 0px !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: $color-blue !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: rgba(46, 182, 174, 0.54);
+}
+
+.mat-slide-toggle.mat-checked .mat-ripple-element {
+    background-color: $color-blue !important;
+}
+
+/** select dropdown styles*/
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: $color-blue;
+}
+
+.mat-option-text {
+    font-size: 16px;
+}
+
+/** Multiple select dropdown styles*/
+.mat-pseudo-checkbox {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 4px !important;
+    border-color: $color-grey !important;
+}
+
+.mat-primary .mat-pseudo-checkbox-checked,
+.mat-primary .mat-pseudo-checkbox-indeterminate {
+    background: $color-blue !important;
+    border-color: $color-blue !important;
+}
+
+.mat-pseudo-checkbox-checked::after {
+    top: 4px !important;
+    left: 3px !important;
+}
+
+.mat-option-multiple .mat-option-text {
+    color: $color-light-black !important;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+
+/** tab styles*/
+.mat-tab-label .mat-tab-label-content {
+    font-size: 16px;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: $color-blue !important;
+}
+
+.mat-tab-label {
+    height: 60px !important;
+}
+
+.top-label {
+    font-size: 24px;
+}
+
+.mat-tab-label-active .top-label {
+    color: $color-blue;
+}
+
+/** table styles*/
+.mat-table thead {
+    background-color: $color-grey-shade !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: $color-white;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: $color-white-shade;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-prefix,
+.mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: -0.1em !important;
+}
+
+mat-row,
+mat-header-row,
+mat-footer-row,
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+th.mat-header-cell {
+    font-size: 16px;
+    color: #676767;
+}
+
+.mat-cell,
+.mat-footer-cell {
+    font-size: 16px;
+    color: $color-light-black;
+}
+
+/** Quicklinks button styles*/
+.mat-button {
+    color: $color-blue;
+}
+
+.btn-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-blue;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    display: block;
+
+}
+
+.btn-link:hover {
+    color: $color-blue;
+    text-decoration: underline;
+}
+
+/** CALENDAR styles*/
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.29);
+}
+
+.mat-datepicker-toggle-active {
+    color: $color-blue !important;
+}
+
+.mat-calendar-body-selected {
+    background-color: $color-blue !important;
+}
+
+.mat-datepicker-content {
+    box-shadow: 0px 1px 6px #00000040, 0px 1px 6px #00000040, 0px 1px 6px #00000040;
+}
+
+/** form-field styles*/
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: $color-blue !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: $color-blue !important;
+}
+
+
+/** bread-crumb styles*/
+.bread-crumb {
+    color: $color-black;
+    padding: 15px 0px;
+    font-size: 15px;
+}
+
+.bread-crumb .mat-button {
+    color: $color-dark-grey-shade !important;
+    background-color: $color-white;
+    min-width: auto !important;
+    padding: 0 0px !important;
+    font-size: 15px !important;
+    line-height: 0 !important;
+}
+
+.bread-crumb .mat-button-wrapper {
+    color: $color-dark-grey-shade !important;
+}
+
+/** header-section styles*/
+.header-section .user-dropdown .profile-img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: $color-white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 55px;
+    margin-right: 10px;
+}
+
+.header-section .text-right .user-dropdown .user-btn {
+    color: $color-white;
+}
+
+.header-section .user-dropdown .dropdown-menu {
+    top: 62px;
+    right: 0;
+    left: unset;
+}
+
+.header-section .user-dropdown .dropdown-menu .dropdown-item:hover {
+    color: $color-white;
+    text-decoration: none;
+    background-color: $color-blue;
+}
+
+/** MODAL / DIALOG BOX styles*/
+.mat-dialog-container {
+    border-radius: 6px !important;
+}
+
+.mat-dialog-container .popup-btn {
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    width: 90px;
+    margin: 0 10px;
+}
+
+.popup-btn-active {
+    background-color: $color-blue;
+}
+
+.popup-btn-inactive {
+    background-color: $color-grey;
+}
+
+.popup-btn-section {
+    text-align: right;
+}
+
+/** pagination styles*/
+.pagination-section .mat-icon-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+    line-height: 33px !important;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: $color-dark-grey-shade;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.pagination-section .mat-icon-button:hover,
+.pagination-section .active {
+    border: 1px solid $color-blue;
+    color: $color-black;
+}
+
+.pagination-section .mat-icon-button .mat-button-wrapper>* {
+    vertical-align: middle !important;
+}
+
+.pagination-section .mat-button-ripple.mat-ripple,
+.pagination-section .mat-button-focus-overlay {
+    opacity: 0;
+}
+
+/** icon-section styles*/
+.icon-section .mat-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-section .global svg .a,
+.icon-section .search svg .a {
+    fill: #000;
+    stroke: none;
+}
+
+.icon-section2 .mat-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/** upcoming-holidays styles*/
+.upcoming-holidays .holidays-heading {
+    padding: 10px 0;
+}
+
+.upcoming-holidays .heading5 {
+    font-weight: 700 !important;
+}
+
+.upcoming-holidays .more_horiz {
+    color: $color-grey;
+    float: right;
+    margin-top: -5px;
+}
+
+.upcoming-holidays .holiday-row {
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 0;
+    height: 56px;
+}
+
+.upcoming-holidays .holiday-row .calendar {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    background: $color-grey-shade;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.upcoming-holidays .holiday-row .calendar .week {
+    font-size: 13px;
+    line-height: 18px;
+    color: $color-light-black;
+}
+
+.upcoming-holidays .holiday-row .calendar .day {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: $color-light-black;
+}
+
+.upcoming-holidays .holiday-row .holiday-name {
+    display: inline-block;
+    vertical-align: middle;
+    height: 56px;
+    position: absolute;
+    padding: 15px 0 15px 10px;
+    color: $color-light-black;
+}
+
+/** STATUS PROGRESS styles*/
+.status-progress .status-title {
+    font-size: 14px;
+    color: $color-black;
+}
+
+.status-progress .mat-progress-bar {
+    height: 12px;
+    border-radius: 6px;
+}
+
+.status-progress .mat-progress-bar-buffer {
+    background-color: $color-grey-shade;
+}
+
+.status-progress .mat-progress-bar-fill::after {
+    background-color: $color-blue;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.stepper-block {
+    .mat-icon {
+        position: absolute;
+        top: 34px;
+        color: #fff;
+        left: 13px;
+        z-index: 999;
+        font-size: 16px;
+
+        @media(min-width:992px) {
+            left: 88px;
+        }
+    }
+
+    .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+        padding: 0 !important;
+    }
+
+    .mat-step-header .mat-step-label,
+    .mat-step-header .mat-step-optional {
+
+        font: 12px/16px Roboto;
+        overflow: visible;
+        white-space: normal;
+
+    }
+
+
+    .mat-stepper-horizontal,
+    .mat-stepper-vertical {
+        background-color: transparent;
+    }
+
+    background-color: #FAFAFA;
+    padding: 20px;
+
+    @media(min-width:992px) {
+        padding: 50px;
+    }
+
+    .mat-step-icon {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        border: 2px solid #A8A8A8;
+    }
+
+    .mat-step-header .mat-step-icon-selected,
+    .mat-step-header .mat-step-icon-state-done,
+    .mat-step-header .mat-step-icon-state-edit {
+        background-color: $color-blue !important;
+        border-color: $color-blue !important;
+        width: 25px;
+        height: 25px;
+    }
+
+    .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+        margin-top: -30px;
+        position: absolute;
+        padding: 0;
+        color: #A8A8A8;
+
+        @media(min-width:992px) {
+            width: 200px;
+            white-space: nowrap;
+        }
+    }
+
+    .mat-stepper-horizontal-line {
+        margin: 0 -20px !important;
+        border-top-width: 2px;
+        top: 13px !important;
+        width: 100%;
+    }
+
+    .mat-horizontal-stepper-header .mat-step-icon {
+        margin: 0;
+        z-index: 999;
+    }
+
+    .mat-step-header {
+        overflow: visible;
+    }
+
+    .mat-step-header.cdk-keyboard-focused,
+    .mat-step-header.cdk-program-focused,
+    .mat-step-header:hover {
+        background-color: transparent;
+    }
+}
+
+.lg-title {
+    font: 21px/28px Roboto;
+    color: #A8A8A8;
+    font-weight: bold;
+
+}
+
+.md-title {
+    font: 16px/21px Roboto;
+    color: #000000;
+}
+
+.sm-title {
+    font: 16px/21px Roboto;
+    color: #9D9D9D;
+}
+
+.mat-step-icon-content {
+    span {
+        display: none;
+    }
+}
+
+
+
+.bottom-title {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    font: 16px/21px Roboto;
+    width: 100%;
+    text-align: center;
+    color: #A8A8A8;
+}
+
+.mat-horizontal-stepper-header-container {
+    .mat-step-header {
+        &:first-child {
+            .mat-step-label {
+                color: #2EB6AE !important;
+            }
+
+            .bottom-title {
+                color: #2EB6AE !important;
+            }
+        }
+    }
+
+}
+
+.mat-step-header[ng-reflect-state="edit"]+.mat-stepper-horizontal-line {
+    border-top-color: $color-blue !important;
+}
+
+.mat-horizontal-stepper-content[aria-expanded=false] {
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.mat-step-header[aria-selected="true"] {
+    border-top-color: $color-blue !important;
+
+    .mat-step-label-selected {
+        color: $color-blue !important;
+        font: 12px/16px Roboto;
+        overflow: visible;
+
+        .bottom-title {
+            color: #2EB6AE !important;
+        }
+    }
+}
+
+.mat-step-header[ng-reflect-state="edit"] {
+    .mat-step-label {
+        color: $color-blue !important;
+        font: 12px/16px Roboto;
+        overflow: visible;
+
+        .bottom-title {
+            color: #2EB6AE !important;
+        }
+    }
+}
+
+.step-tab-info {
+    position: absolute;
+    top: 0;
+    width: auto;
+    text-align: center;
+    white-space: nowrap;
+    left: 0;
+
+    .mat-step-label {
+        font: 12px/16px Roboto;
+        overflow: visible !important;
+        padding: 0;
+        margin: 0 0 15px 0;
+    }
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after,
+[dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after {
+    display: none !important;
+}
+
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before,
+[dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before {
+    display: none !important;
+}
+
+.textarea-box .mat-form-field-outline {
+    height: auto !important;
+}
+
+.cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    transform: none !important;
+    margin-top: 30px;
+    min-width: auto !important;
+    margin-left: -8px;
+
+    .mat-select-panel {
+        min-width: calc(100% + 140px) !important;
+    }
+}
+
+.mat-datepicker-content {
+    top: -28px;
+    position: relative;
+    left: 10px;
+
+    .mat-calendar {
+        width: 240px !important;
+    }
+}
+
+.mat-form-field-should-float {
+    label {
+        .error-label {
+            color: red;
+        }
+    }
+}
+
+.datepicker {
+    .mat-form-field-infix {
+        margin-top: -10px;
+    }
+
+    .ng-star-inserted {
+        margin-top: 0 !important;
+    }
+
+    .mat-form-field-suffix {
+        top: 8px !important;
+    }
+
+}
+
+.close-icon {
+    color: $color-dark-grey-shade;
+    font-size: 25px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+
+.modal-popup {
+    position: relative;
+}
+
+.input-feild {
+    border: 1px solid $color-grey;
+    border-radius: 2px;
+    opacity: 1;
+    min-height: 50px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.Approved,
+.approved {
+    color: $success;
+    font: 16px/42px Roboto;
+    letter-spacing: 0px;
+}
+
+.Pending,
+.pending {
+    color: $warning;
+    font: 16px/42px Roboto;
+    letter-spacing: 0px;
+}
+
+.Rejected,
+.rejected {
+    color: $error;
+    font: 16px/42px Roboto;
+    letter-spacing: 0px;
+}
+.mat-accordion{
+    mat-expansion-panel{
+        .mat-expansion-panel-header{
+            font-weight: 600;
+        }
+        .mat-expansion-panel-body{
+            padding: 15px;
+        }
+        margin: 0;
+        &.mat-expanded{
+            border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
+            .mat-expansion-panel-header{
+                background-color: $color-grey;
+                height: 50px !important;
+                border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
+            }
+            .mat-expansion-panel-content{
+                border:solid 1px #ccc
+            }
+        }
+    }
+}
+.mat-table{
+    .mat-icon{
+        height: 16px;
+        width: 16px;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

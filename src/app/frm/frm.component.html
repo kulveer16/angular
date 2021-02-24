@@ -1,0 +1,194 @@
+
+ <div class="bgr">
+    <div class="container">
+
+        <div class="row"></div>
+        <div class="col-sm-12">
+           
+            <div class="row">
+                <div class="col-sm-10">
+                    <h2 class="c4"> Personal Details </h2>
+                </div>
+                <!-- <div class="col-sm-2.5">
+                    <button mat-icon-button (click)="onedit()">
+                        <mat-icon>edit</mat-icon>
+                      </button></div> -->
+            </div>
+            <mat-divider></mat-divider>
+            
+        </div>
+   
+
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Form-1">
+        <br><form [formGroup]="personalform">
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Employee ID
+                    </mat-label>
+                    <input class="c2" matInput formControlName="Referenceid" type="text" >
+                    
+                </mat-form-field>
+            </div>
+    
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>First Name
+                    </mat-label>
+                    <input class="c2" matInput formControlName="firstname" type="text" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Middle Name
+                    </mat-label>
+                    <input class="c2" matInput formControlName="middlename" type="text" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Last Name
+                    </mat-label>
+                    <input class="c2" matInput formControlName="lastname" type="text" >
+    
+    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Phone NO
+                    </mat-label>
+                    <input class="c2" matInput formControlName="phno" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Alternate No
+                    </mat-label>
+                    <input class="c2" matInput formControlName="alt" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>AADHAR NO
+                    </mat-label>
+                    <input class="c2" matInput formControlName="aad" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>PAN NO
+                    </mat-label>
+                    <input class="c2" matInput formControlName="pan" type="text" >
+                    
+                </mat-form-field>
+            </div>
+        </div>
+        
+
+    </form></mat-tab>
+    <mat-tab label="Form-2">
+        <br><form [formGroup]="personal">
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Qualifications
+                    </mat-label>
+                    <input class="c2" matInput formControlName="one" type="text" >
+                    
+                </mat-form-field>
+            </div>
+    
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Any Certification
+                    </mat-label>
+                    <input class="c2" matInput formControlName="two" type="text" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Nationality
+                    </mat-label>
+                    <input class="c2" matInput formControlName="three" type="text" >
+                   
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Personal Email
+                    </mat-label>
+                    <input class="c2" matInput formControlName="four" type="text" >
+    
+    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Office Email
+                    </mat-label>
+                    <input class="c2" matInput formControlName="four" type="text" >
+    
+    
+                </mat-form-field>
+            </div>
+            <!-- <div class="row">
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Employee ID
+                    </mat-label>
+                    <input class="c2" matInput formControlName="Referenceid" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Employee ID
+                    </mat-label>
+                    <input class="c2" matInput formControlName="Referenceid" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            <div class="col-sm-3">
+                <mat-form-field class="col-sm-3" appearance="outline"
+                    class="example-full-width input-small-size d-block">
+                    <mat-label>Employee ID
+                    </mat-label>
+                    <input class="c2" matInput formControlName="Referenceid" type="text" >
+                    
+                </mat-form-field>
+            </div>
+            </div> -->
+        </div>
+    </form></mat-tab>
+    </mat-tab-group>
+    </div>
+    </div>
+    
+    
