@@ -6,6 +6,7 @@ WORKDIR /app
 #copy all into currenct directory (i.e /app)
 COPY . .
 #run command to install dependencies and build node module
+RUN npm update & npm cache clean --force
 RUN  npm run build
 
 #STAGE 2
