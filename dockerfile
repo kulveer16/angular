@@ -6,7 +6,7 @@ WORKDIR /app
 #copy all into currenct directory (i.e /app)
 COPY . .
 #run command to install dependencies and build node module
-RUN npm i && npm run build
+RUN  npm run build
 
 #STAGE 2
 #using official nginx image as base image for executing subsequent instructions relevant to ngnix configuration
